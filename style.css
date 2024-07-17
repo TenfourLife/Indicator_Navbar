@@ -1,0 +1,94 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF6F61; /* Updated background color */
+}
+.custom-nav{
+    border-radius: 12px;
+    background: #FFF;
+    padding: 0 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.custom-nav-content{
+    display: flex;
+    height: 120px;
+    align-items: center;
+    list-style: none;
+    position: relative;
+}
+.custom-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 120px;
+    width: 95px;
+    text-decoration: none;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.custom-link.active{
+    transform: translateY(-10px);
+}
+.custom-icon{
+    font-size: 38px;
+    color: #333; /* Updated icon color */
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.custom-link.active .custom-icon{
+    color: #FF6F61; /* Updated active icon color */
+}
+.custom-text{
+    position: absolute;
+    font-size: 12px;
+    font-weight: 500;
+    color: #FF6F61; /* Updated text color */
+    opacity: 0;
+    transform: translateY(32px);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.custom-link.active .custom-text{
+    opacity: 1;
+}
+.custom-indicator{
+    position: absolute;
+    top: -14px;
+    left: 48px;
+    height: 36px;
+    width: 36px;
+    background-color: #FFF;
+    border: 6px solid #FF6F61; /* Updated indicator border color */
+    border-radius: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.custom-indicator::before,
+.custom-indicator::after{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    height: 24px;
+    width: 19px;
+}
+.custom-indicator::before{
+    left: -22px;
+    background-color: #FFF;
+    border-top-right-radius: 25px;
+    box-shadow: 1px -13px #FF6F61; /* Updated indicator shadow color */
+}
+.custom-indicator::after{
+    right: -22px;
+    background-color: #FFF;
+    border-top-left-radius: 25px;
+    box-shadow: -1px -13px #FF6F61; /* Updated indicator shadow color */
+}
